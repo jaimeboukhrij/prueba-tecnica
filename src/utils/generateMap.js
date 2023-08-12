@@ -1,18 +1,28 @@
 import areArraysEqual from './areArrayEqual'
 
-function generateMap (userPosition) {
+function generateMap ({ start, final, obstacules }) {
   const matrix = []
-  const obstacules = [[4, 4], [3, 4], [4, 3], [3, 3]]
   for (let i = 0; i < 6; i++) {
     const row = []
     for (let j = 0; j < 6; j++) {
-      if (i === userPosition[0] && j === userPosition[1]) {
+      if (i === start[0] && j === start[1]) {
         row.push({
           id: [i, j],
           isActivate: true,
           isHover: false,
-          robot: false,
-          obstacule: false
+          robot: true,
+          obstacule: false,
+          finalPlace: false
+        })
+      } else if (i === final[0] && j === final[1]) {
+        row.push({
+          id: [i, j],
+          isActivate: true,
+          isHover: false,
+          robot: true,
+          obstacule: false,
+          finalPlace: true
+
         })
       } else if (obstacules.some(elem => areArraysEqual(elem, [i, j]))) {
         row.push({
@@ -20,7 +30,8 @@ function generateMap (userPosition) {
           isActivate: false,
           isHover: false,
           robot: false,
-          obstacule: true
+          obstacule: true,
+          finalPlace: false
         })
       } else {
         row.push({
@@ -28,7 +39,8 @@ function generateMap (userPosition) {
           isActivate: false,
           isHover: false,
           robot: false,
-          obstacule: false
+          obstacule: false,
+          finalPlace: false
         })
       }
     }

@@ -10,12 +10,13 @@ import obstacule from '../../../assest/img/pngwing.com (19).png'
 
 export default function SettingCard ({ action, properties, setProperties }) {
   const [positionCards, setPositionCards] = useState([])
-  // const [finalPosition] = useState([0, 2])
 
   useEffect(() => {
-    const initialMap = preMap()
-    setPositionCards(initialMap)
-  }, [])
+    if (action === 'reset') {
+      const initialMap = preMap()
+      setPositionCards(initialMap)
+    }
+  }, [action])
 
   const handleClick = (rowIndex, columnIndex) => {
     if (action === 'start') {
@@ -45,8 +46,12 @@ export default function SettingCard ({ action, properties, setProperties }) {
     if (action === 'obstacules') {
       setPositionCards(prevMap => {
         const updatedMap = [...prevMap]
+        // if (properties.obstacules.some(elem => areArraysEqual) > 0) { // para que solo se pueda seleccionar 1 final
+        //   updatedMap[properties.final[0]][properties.final[1]].final = false
+        // }
         updatedMap[rowIndex][columnIndex].obstacules = true
-        setProperties({ ...properties, obstacules: [...properties.obstacules, [rowIndex, columnIndex]] })
+        const newProp = { ...properties, obstacules: [...properties.obstacules, [rowIndex, columnIndex]] }
+        setProperties(newProp)
         return updatedMap
       })
     }

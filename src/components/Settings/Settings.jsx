@@ -3,14 +3,9 @@ import mapPicture from '../../assest/img/pantalla-grid-grande@3x.png'
 import styles from './Settings.module.css'
 import Form from './settingCard/Form/Form'
 import SettingCard from './settingCard/SettingCard'
-export default function Settings () {
-  const [action, setAction] = useState()
-  const [properties, setProperties] = useState({
-    start: [],
-    final: [],
-    obstacules: []
-  })
-  console.log(properties)
+export default function Settings ({ setMap, properties, setProperties }) {
+  const [action, setAction] = useState('reset')
+
   return (
     <main className={styles.main}>
       <section
@@ -20,7 +15,7 @@ export default function Settings () {
         <SettingCard action={action} properties={properties} setProperties={setProperties} />
       </section>
       <section className={styles.form}>
-        <Form setAction={setAction} />
+        <Form setAction={setAction} action={action} setMap={setMap} />
       </section>
     </main>
 

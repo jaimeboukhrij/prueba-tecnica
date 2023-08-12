@@ -1,0 +1,53 @@
+.section{
+    height: 60%;
+    width: 100%;
+}
+
+.section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ margin: 5% 0;
+}
+
+.section button{
+    width: 80%;
+    cursor: pointer;
+  background-color: #7AE5D6;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  padding: 4%;
+  border: 2px solid rgb(225, 225, 225);
+
+}
+
+.section button:hover{
+   
+  background-color: #1ce4c9;
+
+
+}
+
+.section div:nth-child(4) button,
+.section div:nth-child(5) button{
+    width: 80%;
+    cursor: pointer;
+  background-color:#DF5AD3;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  padding: 4%;
+  border: 2px solid rgb(225, 225, 225);
+
+}
+
+.section div:nth-child(4) button:hover,
+.section div:nth-child(5) button:hover{
+   
+    background-color:#d220c3;
+
+
+
+}

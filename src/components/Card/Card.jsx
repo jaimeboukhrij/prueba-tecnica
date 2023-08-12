@@ -11,13 +11,13 @@ import CardHover from '../../utils/cardHover'
 import areArraysEqual from '../../utils/areArrayEqual'
 import finalGame from '../../utils/finalGame'
 
-export default function Card () {
+export default function Card ({ properties }) {
   const [positionCards, setPositionCards] = useState([])
-  const [userPosition, setUserPosition] = useState([2, 2])
-  const [finalPosition] = useState([0, 2])
+  const [userPosition, setUserPosition] = useState(properties.start)
+  const [finalPosition] = useState(properties.final)
 
   useEffect(() => {
-    const initialMap = generateMap(userPosition)
+    const initialMap = generateMap(properties)
     setPositionCards(initialMap)
   }, [])
 
@@ -46,11 +46,6 @@ export default function Card () {
     }
   }
 
-  // const finalGame = (rowIndex, columnIndex,finalPosition) => {
-
-  //   if(!userPosition)
-  // }
-
   return (
     <main className={styles.main}>
       {positionCards?.map((row, index) => (row.map((cell, columnIndex) => (
@@ -59,7 +54,7 @@ export default function Card () {
             ? <img
                 src={robot}
               />
-            : areArraysEqual(finalPosition, cell.id)
+            : cell.finalPlace
               ? <img
                   src={final}
                   onClick={() => finalGame(cell.id[0], cell.id[1], finalPosition)}
