@@ -5,13 +5,15 @@ import pointMap from '../../assest/img/punto-mapa-normal@3x.png'
 import pointActivate from '../../assest/img/punto-mapa-activo@3x.png'
 import pointMapHover from '../../assest/img/punto-mapa-hover@3x.png'
 import robot from '../../assest/img/robot@2x.png'
+import obstacule from '../../assest/img/pngwing.com (19).png'
 import final from '../../assest/img/casa-robot@2x.png'
 import CardHover from '../../utils/cardHover'
 import areArraysEqual from '../../utils/areArrayEqual'
+import finalGame from '../../utils/finalGame'
 
 export default function Card () {
   const [positionCards, setPositionCards] = useState([])
-  const [userPosition, setUserPosition] = useState([0, 0])
+  const [userPosition, setUserPosition] = useState([2, 2])
   const [finalPosition] = useState([0, 2])
 
   useEffect(() => {
@@ -44,9 +46,10 @@ export default function Card () {
     }
   }
 
-  const finalGame = (rowIndex, columnIndex) => {
-    if (areArraysEqual(finalPosition, [rowIndex, columnIndex])) alert('victoria')
-  }
+  // const finalGame = (rowIndex, columnIndex,finalPosition) => {
+
+  //   if(!userPosition)
+  // }
 
   return (
     <main className={styles.main}>
@@ -59,15 +62,22 @@ export default function Card () {
             : areArraysEqual(finalPosition, cell.id)
               ? <img
                   src={final}
-                  onClick={() => finalGame(cell.id[0], cell.id[1])}
+                  onClick={() => finalGame(cell.id[0], cell.id[1], finalPosition)}
 
                 />
-              : <img
-                  src={cell.isHover ? pointMapHover : cell.isActivate ? pointActivate : pointMap}
-                  onMouseEnter={() => handleMouseEnter(cell.id[0], cell.id[1])}
-                  onMouseLeave={() => handleMouseLeave(cell.id[0], cell.id[1])}
-                  onClick={() => handleClick(cell.id[0], cell.id[1], cell.isHover)}
-                />}
+              : cell.obstacule
+                ? <img
+                    style={{ width: '130px' }}
+                    src={obstacule}
+
+                  />
+
+                : <img
+                    src={cell.isHover ? pointMapHover : cell.isActivate ? pointActivate : pointMap}
+                    onMouseEnter={() => handleMouseEnter(cell.id[0], cell.id[1])}
+                    onMouseLeave={() => handleMouseLeave(cell.id[0], cell.id[1])}
+                    onClick={() => handleClick(cell.id[0], cell.id[1], cell.isHover)}
+                  />}
         </div>
       ))
       ))}

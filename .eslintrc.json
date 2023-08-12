@@ -3,6 +3,7 @@
   "rules": {
     "react/jsx-no-undef": "off",
     "react/react-in-jsx-scope": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "off"
   }
 }
