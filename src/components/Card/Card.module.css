@@ -1,0 +1,24 @@
+.main{
+    margin: 0 auto;
+    padding-top: 1%;
+    position: relative;
+    top: 4.5%;
+    width: 88.5%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas de igual ancho */
+    gap: 15px;
+}
+
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card img{
+}

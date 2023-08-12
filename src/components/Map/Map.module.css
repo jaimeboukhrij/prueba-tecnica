@@ -1,0 +1,7 @@
+.main{
+    height: 98vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    z-index: 1;
+}
