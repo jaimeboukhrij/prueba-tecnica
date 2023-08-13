@@ -1,23 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-// import Map from './components/Map/Map'
 import Settings from './components/Settings/Settings'
 import Map from './components/Map/Map'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App () {
-  const [showMap, setMap] = useState('set')
+  const [showMap, setMap] = useState('map')
   const [properties, setProperties] = useState({
-    start: [1, 3],
-    final: [1, 0],
+    start: [0, 0],
+    final: [0, 2],
     obstacules: []
   })
 
   return (
-    <>
+    <main className='app_main'>
       {showMap === 'map'
-        ? <Map properties={properties} />
+        ? <Map properties={properties} setMap={setMap} />
         : <Settings setMap={setMap} properties={properties} setProperties={setProperties} />}
-    </>
+    </main>
   )
 }
 

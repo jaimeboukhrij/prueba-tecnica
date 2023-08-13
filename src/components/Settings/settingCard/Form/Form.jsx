@@ -27,7 +27,7 @@ export default function Form ({ setAction, setMap, action }) {
 
       </div>
       <div>
-        <button onClick={() => setMap('map')}>Guardar Cambios</button>
+        <button onClick={() => setMap('map')}>Guardar</button>
 
       </div>
     </section>

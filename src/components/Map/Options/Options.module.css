@@ -1,6 +1,9 @@
 .section{
-    height: 60%;
+    height: 40%;
     width: 100%;
+    display: grid;
+    align-content: center;
+    
 }
 
 .section div{
@@ -8,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
- margin: 5% 0;
+    margin: 5% 0;
 }
 
 .section img{
@@ -18,12 +21,13 @@
 .section button{
     width: 80%;
     cursor: pointer;
-  background-color: #7AE5D6;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.3em;
-  padding: 4%;
-  border: 2px solid rgb(225, 225, 225);
+    background-color: #7AE5D6;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.3em;
+    padding: 4%;
+    border: 2px solid rgb(225, 225, 225);
 
 }
 
@@ -34,21 +38,12 @@
 
 }
 
-.section div:nth-child(4) button,
-.section div:nth-child(5) button{
-    width: 80%;
-    cursor: pointer;
+.section div:nth-child(2) button{
   background-color:#DF5AD3;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.3em;
-  padding: 4%;
-  border: 2px solid rgb(225, 225, 225);
 
 }
 
-.section div:nth-child(4) button:hover,
-.section div:nth-child(5) button:hover{   
+.section div:nth-child(2) button:hover{   
     background-color:#d220c3;
 }
 

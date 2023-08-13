@@ -1,6 +1,9 @@
 import areArraysEqual from './areArrayEqual'
 
 function generateMap ({ start, final, obstacules }) {
+  if (obstacules.length === 0) {
+    obstacules = [[2, 2], [2, 3], [2, 4]]
+  }
   const matrix = []
   for (let i = 0; i < 6; i++) {
     const row = []
