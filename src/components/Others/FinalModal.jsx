@@ -1,14 +1,13 @@
 import Modal from 'react-bootstrap/Modal'
 import styles from './FinalModal.module.css'
 
-function FinalModal ({ show, setShow, setReresetMap, resetMap }) {
-  const handleClose = () => setShow(false)
-
+function FinalModal ({ show, setShow, setReresetMap, resetMap, isOver }) {
+  console.log(isOver)
   return (
     <>
 
       <Modal
-        show={show} onHide={handleClose}
+        show={show}
         size='md'
         aria-labelledby='contained-modal-title-vcenter'
         centered
@@ -18,7 +17,10 @@ function FinalModal ({ show, setShow, setReresetMap, resetMap }) {
       >
 
         <Modal.Body className={styles.body}>
-          <h4>¡HAS LLEGADO A LA META! 🥳</h4>
+          <h4>{isOver
+            ? '¡Lo siento, has perdido! 😢'
+            : '¡HAS LLEGADO A LA META! 🥳'}
+          </h4>
           <section>
             <button onClick={() => {
               setReresetMap(!resetMap)

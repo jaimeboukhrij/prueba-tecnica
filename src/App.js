@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Settings from './components/Settings/Settings'
 import Map from './components/Map/Map'
@@ -11,6 +11,12 @@ function App () {
     final: [0, 2],
     obstacules: []
   })
+
+  useEffect(() => {
+    if (showMap !== 'map') {
+      setProperties(prevProperties => ({ ...prevProperties, obstacules: [] }))
+    }
+  }, [showMap])
 
   return (
     <main className='app_main'>

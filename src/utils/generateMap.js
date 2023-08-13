@@ -20,7 +20,7 @@ function generateMap ({ start, final, obstacules }) {
       } else if (i === final[0] && j === final[1]) {
         row.push({
           id: [i, j],
-          isActivate: true,
+          isActivate: false,
           isHover: false,
           robot: true,
           obstacule: false,

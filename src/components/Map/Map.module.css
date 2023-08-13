@@ -14,3 +14,54 @@
     display: flex;
     align-items: center;
 }
+
+@media screen and (min-width: 1250px) and (max-width: 1350px) {
+    .section{
+        height: 98vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 80%;
+        z-index: 1;
+    }
+
+    .form{
+        width: 20%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1500px) {
+    .section{
+        height: 98vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 70%;
+        z-index: 1;
+    }
+
+    .form{
+        width: 20%;
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1850px) {
+    .section{
+        height: 98vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 65%;
+        z-index: 1;
+
+    }
+
+    .form{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        padding-top: 5%;
+    }
+}

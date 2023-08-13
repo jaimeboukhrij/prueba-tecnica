@@ -26,178 +26,178 @@
 }
 
 @media screen and (max-width: 1050px)  {
-  .robot{
-    width: 110px;
-  }
-
-  .final{
-    width: 120px;
-  }
-  .main{
-    padding-top: 0%;
-    position: relative;
-    top: 0%;
-    left: 5%;
-    width: 90vh;
-    height: 95vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    align-content: center;
+.robot{
+  width: 110px;
 }
 
-  .card{
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 110px !important;
-      width: 100px !important;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      transform: scale(88%);
-  }
+.final{
+  width: 120px;
+}
+.main{
+  padding-top: 0%;
+  position: relative;
+  top: 0%;
+  left: 5%;
+  width: 90vh;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  align-content: center;
+}
 
-  .obstacule{
-      width: 110px;
-  }
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 110px !important;
+    width: 100px !important;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transform: scale(88%);
+}
+
+.obstacule{
+    width: 110px;
+}
 }
 
 @media screen and (min-width: 1501px) and (max-width: 1800px)  {
-  .robot{
-    width: 110px;
-  }
-
-  .final{
-    width: 120px;
-  }
-  .main{
-    padding-top: 0%;
-    position: relative;
-    top: 1.8%;
-    left: 5%;
-    width: 90vh;
-    height: 95vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    align-content: center;
+.robot{
+  width: 110px;
 }
 
-  .card{
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 110px !important;
-      width: 100px !important;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      transform: scale(88%);
-  }
+.final{
+  width: 120px;
+}
+.main{
+  padding-top: 0%;
+  position: relative;
+  top: 1.8%;
+  left: 5%;
+  width: 90vh;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  align-content: center;
+}
 
-  .obstacule{
-      width: 110px;
-  }
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 110px !important;
+    width: 100px !important;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transform: scale(88%);
+}
+
+.obstacule{
+    width: 110px;
+}
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1500px)  {
-  .main{
-    padding-top: 0%;
-    position: relative;
-    top: 1.8%;
-    left: 7%;
-    width: 90vh;
-    height: 95vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    align-content: center;
+.main{
+  padding-top: 0%;
+  position: relative;
+  top: 1.8%;
+  left: 7%;
+  width: 90vh;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  align-content: center;
 }
 
-  .card{
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 140px;
-      width: 110px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-  }
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 140px;
+    width: 110px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
 
-  .obstacule{
-      width: 110px;
-  }
+.obstacule{
+    width: 110px;
+}
 }
 
 
 
 @media screen and (max-height: 800px) {
-  .robot{
-    width: 110px;
-  }
+.robot{
+  width: 110px;
+}
 
-  .final{
+.final{
+  width: 120px;
+}
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 117px;
     width: 120px;
-  }
-  .card{
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 117px;
-      width: 120px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-  }
-  .obstacule{
-      width: 105px;
-  }
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.obstacule{
+    width: 105px;
+}
 }
 @media screen and (min-height: 801px) and (max-height: 850px) {
-  
-  .card {
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 125px;
-      width: 100px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-    
-  }
 
-  .obstacule{
-      width: 115px;
-  }
+.card {
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 125px;
+    width: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.obstacule{
+    width: 115px;
+}
 }
 
 
 @media screen and (min-height: 851px) and (max-height: 900px)  {
- 
-  .card{
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 140px;
-      width: 100px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-  }
 
-  .obstacule{
-      width: 110px;
-  }
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 140px;
+    width: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.obstacule{
+    width: 110px;
+}
 }
 
 
 @media screen and (min-height: 1000px) and (max-height: 1300px)  {
- 
-  .card{
-      background-repeat: no-repeat;
-      cursor: pointer;
-      height: 160px;
-      width: 140px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-  }
 
-  .obstacule{
-      width: 140px;
-  }
+.card{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 160px;
+    width: 140px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.obstacule{
+    width: 140px;
+}
 }
