@@ -2,7 +2,6 @@ import Modal from 'react-bootstrap/Modal'
 import styles from './FinalModal.module.css'
 
 function FinalModal ({ show, setShow, setReresetMap, resetMap, isOver }) {
-  console.log(isOver)
   return (
     <>
 

@@ -28,7 +28,7 @@ export default function Card ({ properties, resetMap, setReresetMap }) {
     setIsOver(false)
   }, [resetMap])
 
-  const handleMouseEnter = (rowIndex, columnIndex, isHover) => {
+  const handleMouseEnter = (rowIndex, columnIndex) => {
     setPositionCards(prevMap => CardHover(prevMap, rowIndex, columnIndex, userPosition))
   }
 
@@ -40,7 +40,7 @@ export default function Card ({ properties, resetMap, setReresetMap }) {
     })
   }
 
-  const handleClick = (rowIndex, columnIndex, isHover, cell) => {
+  const handleClick = (rowIndex, columnIndex, isHover) => {
     if (isHover) {
       if (finalGame(rowIndex, columnIndex, finalPosition)) {
         setShow(true)
